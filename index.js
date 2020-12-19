@@ -34,6 +34,9 @@ module.exports = class {
                 console.log(response);
                 throw new Error('Error while sending request');
             }
+            if(this.options.verbose) {
+                console.log(response.data);
+            }
             return response.data;
         });
     }
