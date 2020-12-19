@@ -24,6 +24,9 @@ module.exports = class {
     }
 
     async query(target, request) {
+        if(this.options.verbose) {
+            console.log({target, request});
+        }
         return axios.post(this.options.endpoint, request, {
             headers: {'X-Amz-Target': `DynamoDB_${this.options.version}.${target}`},
             validateStatus: (status) => {

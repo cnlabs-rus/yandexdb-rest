@@ -1,6 +1,6 @@
 {
   "name": "@cnlabs/yandexdb-rest",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "library than decorates yandex db dynamodb rest api in lightweight style ",
   "main": "index.js",
   "keywords": [
@@ -19,7 +19,8 @@
     "axios": "^0.21.0"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "md5": "^2.3.0"
   },
   "jest": {
     "testEnvironment": "node"
