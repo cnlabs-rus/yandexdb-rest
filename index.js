@@ -36,10 +36,13 @@ module.exports = class {
             if(response.status > 299) {
                 console.log(response.status);
                 console.log(response.config);
+                console.log(response.body);
                 throw new Error('Error while sending request');
             }
             if(this.options.verbose) {
-                console.log(response.data);
+                console.log(response.status);
+                console.log(response.config);
+                console.log(response.body);
             }
             return response.data;
         });
