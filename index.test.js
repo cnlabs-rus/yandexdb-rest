@@ -1,3 +1,4 @@
+jest.setTimeout(30000);
 const YandexDB = require('./index');
 
 describe('main', function () {
