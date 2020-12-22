@@ -34,7 +34,8 @@ module.exports = class {
             }
         }).then(async (response) => {
             if(response.status > 299) {
-                console.log(response);
+                console.log(response.status);
+                console.log(response.config);
                 throw new Error('Error while sending request');
             }
             if(this.options.verbose) {
