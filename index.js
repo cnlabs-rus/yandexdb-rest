@@ -34,15 +34,11 @@ module.exports = class {
             }
         }).then(async (response) => {
             if(response.status > 299) {
-                console.log(response.status);
-                console.log(response.config);
-                console.log(response.data);
+                console.log(response.status, "\n", response.data);
                 throw new Error('Error while sending request');
             }
             if(this.options.verbose) {
-                console.log(response.status);
-                console.log(response.config);
-                console.log(response.data);
+                console.log(response.status, "\n", response.data);
             }
             return response.data;
         });
